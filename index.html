@@ -163,13 +163,22 @@
         
   
     <h1 itemprop="name">
+<<<<<<< HEAD
       <a class="article-title" href="/2019/08/23/hello-world/">Hello World</a>
+=======
+      <a class="article-title" href="/2019/07/31/hello-world/">Hello World</a>
+>>>>>>> 4b32ae75eca0dbca65a59e2234166c6437208e52
     </h1>
   
 
         
+<<<<<<< HEAD
         <a href="/2019/08/23/hello-world/" class="archive-article-date">
   	<time datetime="2019-08-23T05:50:14.557Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
+=======
+        <a href="/2019/07/31/hello-world/" class="archive-article-date">
+  	<time datetime="2019-07-31T14:51:15.401Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-31</time>
+>>>>>>> 4b32ae75eca0dbca65a59e2234166c6437208e52
 </a>
         
       </header>
@@ -193,7 +202,11 @@
 
       
         <p class="article-more-link">
+<<<<<<< HEAD
           <a class="article-more-a" href="/2019/08/23/hello-world/">展开全文 >></a>
+=======
+          <a class="article-more-a" href="/2019/07/31/hello-world/">展开全文 >></a>
+>>>>>>> 4b32ae75eca0dbca65a59e2234166c6437208e52
         </p>
       
 
@@ -318,7 +331,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <input id="img" type="file">
+<<<<<<< HEAD
         
+=======
+
+<p><script><br>  var img = document.querySelector(“#img”)<br>  var btn = document.querySelector(“#btn”)<br>  img.addEventListener(‘change’, function() {<br>      var file = this.files[0];<br>      // 确认选择的文件是图片<br>      if(file.type.indexOf(“image”) == 0) {<br>          var reader = new FileReader();<br>          reader.readAsDataURL(file);<br>          reader.onload = function(e) {<br>              // 图片base64化<br>              var newUrl = this.result;<br>              var imgstrdata = strLength(reader.result)<br>              canvasDataURL(reader.result, imgstrdata / 300);<br>          };<br>      }<br>  });<br>  function strLength(str) {<br>    str = str.substring(22);<br>    const equalIndex = str.indexOf(‘=’);<br>    if (str.indexOf(‘=’) &gt; 0) {<br>      str = str.substring(0, equalIndex);<br>    }<br>    const strLen = str.length;<br>    const data = strLen - (strLen / 8) * 2;<br>    return (data / 1024).toFixed(2);<br>  }<br>      // 压缩<br>  function canvasDataURL(imgurl, re){<br>    re = re &lt; 1 ? re += 1 : re;<br>    const img = new Image();<br>    img.src = imgurl;<br>    img.onload = () =&gt; {<br>      const canvas = document.createElement(‘canvas’);<br>      const ctx = canvas.getContext(‘2d’);<br>      // 创建属性节点<br>      const w = img.width / re;<br>      const h = img.height / re;<br>      const anw = document.createAttribute(‘width’);<br>      anw.nodeValue = w.toString();<br>      const anh = document.createAttribute(‘height’);<br>      anh.nodeValue = h.toString();<br>      canvas.setAttributeNode(anw);<br>      canvas.setAttributeNode(anh);<br>      ctx.drawImage(img, 0, 0, w, h);<br>      // 可以return自己想要的内容<br>      const base = canvas.toDataURL(‘image/jpeg’, 0.6);<br>      const dataSize = strLength(base);<br>      console.log(dataSize)<br>    };<br>  }<br></script></p>
+<blockquote>
+</blockquote>
+
+>>>>>>> 4b32ae75eca0dbca65a59e2234166c6437208e52
       
 
       
@@ -549,7 +570,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 =======
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">旧事</a>
+                <a href="javascript:void(0)" class="js-tag color5">照片处理</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -557,9 +578,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+<<<<<<< HEAD
                 <a href="javascript:void(0)" class="js-tag color5">照片处理</a>
               </li>
 >>>>>>> c7082eaaa010e0c6ab5f90092ae3efb1f8a01cce
+=======
+                <a href="javascript:void(0)" class="js-tag color3">旧事</a>
+              </li>
+>>>>>>> 4b32ae75eca0dbca65a59e2234166c6437208e52
             
             <div class="clearfix"></div>
           </ul>
