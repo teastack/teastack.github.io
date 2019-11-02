@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 風沙旅</title>
+  <title>hyper-v操作笔记 | 風沙旅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="風沙旅">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="查看Centos版本cat /etc/redhat-release hyper查询ip地址ipconfig 查询IP地址（或 ip addr） 创建文件夹mkdir  文件夹名 创建文件touch 文件名 关闭防火墙1    //停止    systemctl stop firewalld.service    //禁止开机启动    systemctl disable firewalld.ser">
+<meta name="keywords" content="笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hyper-v操作笔记">
+<meta property="og:url" content="http://yoursite.com/2019/11/02/liux命令-docker常用操作/index.html">
 <meta property="og:site_name" content="風沙旅">
+<meta property="og:description" content="查看Centos版本cat /etc/redhat-release hyper查询ip地址ipconfig 查询IP地址（或 ip addr） 创建文件夹mkdir  文件夹名 创建文件touch 文件名 关闭防火墙1    //停止    systemctl stop firewalld.service    //禁止开机启动    systemctl disable firewalld.ser">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-11-02T04:24:02.090Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="風沙旅">
+<meta name="twitter:title" content="hyper-v操作笔记">
+<meta name="twitter:description" content="查看Centos版本cat /etc/redhat-release hyper查询ip地址ipconfig 查询IP地址（或 ip addr） 创建文件夹mkdir  文件夹名 创建文件touch 文件名 关闭防火墙1    //停止    systemctl stop firewalld.service    //禁止开机启动    systemctl disable firewalld.ser">
   
     <link rel="alternative" href="/atom.xml" title="風沙旅" type="application/atom+xml">
   
@@ -154,36 +159,98 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-liux命令-docker常用操作" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/02/liux命令-docker常用操作/" class="archive-article-date">
-  	<time datetime="2019-11-02T04:19:21.725Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-02</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/02/liux命令-docker常用操作/">hyper-v操作笔记</a>
+    <h1 class="article-title" itemprop="name">
+      hyper-v操作笔记
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/11/02/liux命令-docker常用操作/" class="archive-article-date">
+  	<time datetime="2019-11-02T04:19:21.725Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="查看Centos版本"><a href="#查看Centos版本" class="headerlink" title="查看Centos版本"></a>查看Centos版本</h2><p>cat /etc/redhat-release</p>
+<h2 id="hyper查询ip地址"><a href="#hyper查询ip地址" class="headerlink" title="hyper查询ip地址"></a>hyper查询ip地址</h2><p>ipconfig 查询IP地址（或 ip addr）</p>
+<h2 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h2><p>mkdir  文件夹名</p>
+<h2 id="创建文件"><a href="#创建文件" class="headerlink" title="创建文件"></a>创建文件</h2><p>touch 文件名</p>
+<h2 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h2><p>1<br>    //停止<br>    systemctl stop firewalld.service<br>    //禁止开机启动<br>    systemctl disable firewalld.service<br>2<br>    //这里发现防火墙是开启的，再来查看防火墙控制的端口<br>    systemctl status firewalld<br>    //查看防火墙控制的端口，发现我想要监听的8081端口没有开启<br>    firewall-cmd –list-all<br>    //永久开启3306端口<br>    sudo firewall-cmd –zone=public –add-port=3306/tcp –permanent<br>    //重载防火墙<br>    sudo firewall-cmd –reload</p>
+<p>参考见：<a href="https://www.cnblogs.com/TimLiuDream/p/9993625.html" target="_blank" rel="noopener">https://www.cnblogs.com/TimLiuDream/p/9993625.html</a>    </p>
+<h2 id="删除文件夹名-文件名"><a href="#删除文件夹名-文件名" class="headerlink" title="删除文件夹名/文件名"></a>删除文件夹名/文件名</h2><p>rm -rf 文件夹名（文件名）</p>
+<h2 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h2><p>exit</p>
+<h2 id="当前路径"><a href="#当前路径" class="headerlink" title="当前路径"></a>当前路径</h2><p>pwd</p>
+<h2 id="重启docker"><a href="#重启docker" class="headerlink" title="重启docker"></a>重启docker</h2><p>启动        systemctl start docker<br>守护进程重启   sudo systemctl daemon-reload<br>重启docker服务   systemctl restart  docker<br>重启docker服务  sudo service docker restart<br>关闭docker   service docker stop<br>关闭docker  systemctl stop docker<br>参考见：<a href="https://blog.csdn.net/easternunbeaten/article/details/80463837" target="_blank" rel="noopener">https://blog.csdn.net/easternunbeaten/article/details/80463837</a></p>
+<h2 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h2><p>镜像images(类) 容器container(对象) 仓库repository  标签tag(版本号)</p>
+<h3 id="查看镜像"><a href="#查看镜像" class="headerlink" title="查看镜像"></a>查看镜像</h3><p>docker images </p>
+<blockquote>
+<p>REPOSITORY: 镜像仓库源<br>TAG: 镜像标签（版本）<br>IMAGE ID: 镜像ID<br>CREATED: 镜像创建时间<br>SIZE: 镜像大小</p>
+</blockquote>
+<p>  docker images -a (列出本地所有镜像)<br>                -q (只显示镜像ID)<br>                -qa (显示所有镜像ID)<br>                –digests (显示镜像的摘要信息)<br>                –no-trunc (显示完整的镜像信息)</p>
+<h2 id="搜索镜像"><a href="#搜索镜像" class="headerlink" title="搜索镜像"></a>搜索镜像</h2><p>docker search tomcat<br>(docker search -s 30 tomcat  只查找下载数超过30)</p>
+<h2 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h2><p>docker pull 镜像名:版本号（不写版本号默认最新的）</p>
+<h2 id="运行容器"><a href="#运行容器" class="headerlink" title="运行容器"></a>运行容器</h2><p>docker run -it imagesID        以交互式启动（启动后进入命令终端）<br>            i                   交互<br>             t                  终端<br>docker run -d 容器名（imagesID） 后台式运行<br>docker run -d –name 自定义容器名 容器名（imagesID） 后台式运行<br>docker run -it -p 8888:8080 容器名（容器ID）<br>               主机端口:容器端口<br>              （可以运行多个容器）<br>docker run -it -P 容器名（容器ID）随机分配端口</p>
+<h2 id="停止容器"><a href="#停止容器" class="headerlink" title="停止容器"></a>停止容器</h2><p>docker stop 容器ID<br>docker kill 容器ID （强制停止）</p>
+<h2 id="镜像运行状态"><a href="#镜像运行状态" class="headerlink" title="镜像运行状态"></a>镜像运行状态</h2><p>docker ps -a 列出所有正在运行的容器+历史运行过的<br>          -l 显示最近创建的容器<br>          -n 3 显示最近n创建的容器<br>          -q 静默模式，只显示容器编号<br>          –no-trunc 不截断输出</p>
+<h2 id="退出容器"><a href="#退出容器" class="headerlink" title="退出容器"></a>退出容器</h2><p>exit 停止并退出<br>ctrl+p+q 退出不停止</p>
+<h2 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h2><p>docker start 容器ID</p>
+<h2 id="重启容器"><a href="#重启容器" class="headerlink" title="重启容器"></a>重启容器</h2><p>docker restart 容器ID</p>
+<h1 id="删除镜像"><a href="#删除镜像" class="headerlink" title="删除镜像"></a>删除镜像</h1><p>docker rmi IMAGE ID<br>docker rmi -f IMAGE ID 强制删除<br>docker rm CONTAINER ID<br>想要删除运行过的images必须首先删除它的container</p>
+<h2 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h2><p>docker logs 容器ID<br>docker logs -t 容器ID<br>docker logs -t -f 容器ID  持续打印<br>docker logs -t -f –tail 3 容器ID  最后三行</p>
+<h2 id="停止容器运行"><a href="#停止容器运行" class="headerlink" title="停止容器运行"></a>停止容器运行</h2><p>docker top 容器ID</p>
+<h2 id="查看容器内细节"><a href="#查看容器内细节" class="headerlink" title="查看容器内细节"></a>查看容器内细节</h2><p>docker inspect 容器ID</p>
+<h2 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h2><p>docker exec -it 容器ID<br>docker attach 容器ID （重新进入容器）</p>
+<h2 id="容器数据卷"><a href="#容器数据卷" class="headerlink" title="容器数据卷"></a>容器数据卷</h2><p>容器与主机文件共享<br>1 docker cp<br>  docker run -it -v /宿主机绝对路径目录:/容器内目录 容器ID     文件夹不存在会自动创建<br>  docker run -it -v /宿主机绝对路径目录:/容器内目录:ro 容器ID   只读</p>
+<h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h2><h2 id="容器中安装vim"><a href="#容器中安装vim" class="headerlink" title="容器中安装vim"></a>容器中安装vim</h2><p>apt-get update<br>apt-get install vim</p>
+<h2 id="容器中网络不通"><a href="#容器中网络不通" class="headerlink" title="容器中网络不通"></a>容器中网络不通</h2><p>重启容器，还是不行的话<br>测试 ping <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>访问不了<br>在主机中 /etc/resolv.conf 文件末尾中添加<br>nameserver 8.8.8.8<br>nameserver 202.102.224.68</p>
+<p>参考见：<a href="http://dockone.io/question/248" target="_blank" rel="noopener">http://dockone.io/question/248</a></p>
+<h2 id="安装mysql"><a href="#安装mysql" class="headerlink" title="安装mysql"></a>安装mysql</h2><p>docker run -p 3301:3306 –name testmysql -v /test/mysql/conf:/etc/mysql/conf.d -v /test/mysql/logs:logs -v /test/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql</p>
+<p>docker exec -it 容器ID /bin/bash<br>mysql -uroot -p<br>ALTER USER ‘root‘@’%’ IDENTIFIED WITH mysql_native_password BY ‘root’;  设置数据库账号密码</p>
+<p>iptables -t nat -A  DOCKER -p tcp –dport 3302 -j DNAT –to-destination 172.18.111.185:3301<br>（外网连接3302）</p>
+<h2 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h2><p>dokcer run -it -p 8081:808 –name testnode -v /test/node:/test/node node</p>
+<h2 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h2><p>默认访问页面路径<br>/usr/share/nginx/html nginx</p>
+<h2 id="安装宝塔控制面板"><a href="#安装宝塔控制面板" class="headerlink" title="安装宝塔控制面板"></a>安装宝塔控制面板</h2><p>yum install -y wget &amp;&amp; wget -O install.sh <a href="http://download.bt.cn/install/install_6.0.sh" target="_blank" rel="noopener">http://download.bt.cn/install/install_6.0.sh</a> &amp;&amp; bash install.sh<br>查询账号密码<br>/etc/init.d/bt default<br>username: trwwj7kr<br>password: 17f68cb8</p>
+<h2 id="docker容器中安装-vim"><a href="#docker容器中安装-vim" class="headerlink" title="docker容器中安装 vim"></a>docker容器中安装 vim</h2><p>bash: vim: command not found</p>
+<p>apt-get install vim<br>apt-get update<br>apt-get install vim</p>
+<h2 id="windows挂载文件到dockers容器中"><a href="#windows挂载文件到dockers容器中" class="headerlink" title="windows挂载文件到dockers容器中"></a>windows挂载文件到dockers容器中</h2><p>C:\Program Files\Docker\Docker\Resources\bin\docker.exe: Error response from daemon: C: drive is not shared. Please share it in Docker for Windows Settings.<br>See ‘C:\Program Files\Docker\Docker\Resources\bin\docker.exe run –help’.<br>docker软件Settings鼠标右键-&gt;Shared Drives-&gt;把你想挂载的文件所有的盘符勾上-&gt;Apply</p>
+<p>参考见：<a href="https://blog.csdn.net/m0_37477061/article/details/82217525" target="_blank" rel="noopener">https://blog.csdn.net/m0_37477061/article/details/82217525</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -195,160 +262,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/02/liux命令-docker常用操作/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/31/hello-world/" class="archive-article-date">
-  	<time datetime="2019-07-31T14:51:15.401Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-31</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/07/31/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/31/hello-world/">Hello World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/31/随心记/" class="archive-article-date">
-  	<time datetime="2019-07-31T14:51:15.401Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/31/随心记/">随心记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心情</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/31/上传图片压缩/" class="archive-article-date">
-  	<time datetime="2019-07-31T02:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/31/上传图片压缩/">上传时压缩图片</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">照片处理</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/14/平衡世界/" class="archive-article-date">
-  	<time datetime="2019-05-14T02:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/14/平衡世界/">平衡世界</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">旧事</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -371,8 +384,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
