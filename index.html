@@ -163,19 +163,28 @@
         
   
     <h1 itemprop="name">
+<<<<<<< HEAD
       <a class="article-title" href="/2019/11/02/liux命令-docker常用操作/">hyper-v操作笔记</a>
+=======
+      <a class="article-title" href="/2019/11/02/liux命令-docker常用操作/">hyper-v虚拟机操作-docker</a>
+>>>>>>> e3f9f48494f83cc5144a6882c528611b01cfefb6
     </h1>
   
 
         
         <a href="/2019/11/02/liux命令-docker常用操作/" class="archive-article-date">
+<<<<<<< HEAD
   	<time datetime="2019-11-02T04:19:21.725Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-02</time>
+=======
+  	<time datetime="2019-11-02T04:58:06.367Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-02</time>
+>>>>>>> e3f9f48494f83cc5144a6882c528611b01cfefb6
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
+<<<<<<< HEAD
         <h2 id="查看Centos版本"><a href="#查看Centos版本" class="headerlink" title="查看Centos版本"></a>查看Centos版本</h2><p>cat /etc/redhat-release</p>
 <h2 id="hyper查询ip地址"><a href="#hyper查询ip地址" class="headerlink" title="hyper查询ip地址"></a>hyper查询ip地址</h2><p>ipconfig 查询IP地址（或 ip addr）</p>
 <h2 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h2><p>mkdir  文件夹名</p>
@@ -220,6 +229,12 @@
 <h2 id="windows挂载文件到dockers容器中"><a href="#windows挂载文件到dockers容器中" class="headerlink" title="windows挂载文件到dockers容器中"></a>windows挂载文件到dockers容器中</h2><p>C:\Program Files\Docker\Docker\Resources\bin\docker.exe: Error response from daemon: C: drive is not shared. Please share it in Docker for Windows Settings.<br>See ‘C:\Program Files\Docker\Docker\Resources\bin\docker.exe run –help’.<br>docker软件Settings鼠标右键-&gt;Shared Drives-&gt;把你想挂载的文件所有的盘符勾上-&gt;Apply</p>
 <p>参考见：<a href="https://blog.csdn.net/m0_37477061/article/details/82217525" target="_blank" rel="noopener">https://blog.csdn.net/m0_37477061/article/details/82217525</a></p>
 
+=======
+        <blockquote>
+<p>查看Centos版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/redhat-release</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+        
+>>>>>>> e3f9f48494f83cc5144a6882c528611b01cfefb6
       
 
       
@@ -433,7 +448,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+<<<<<<< HEAD
         <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;input id=&quot;img&quot; type=&quot;file&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  var img = document.querySelector(&quot;#img&quot;)</span><br><span class="line">  var btn = document.querySelector(&quot;#btn&quot;)</span><br><span class="line">  img.addEventListener(&apos;change&apos;, function() &#123;</span><br><span class="line">      var file = this.files[0];</span><br><span class="line">      // 确认选择的文件是图片</span><br><span class="line">      if(file.type.indexOf(&quot;image&quot;) == 0) &#123;</span><br><span class="line">          var reader = new FileReader();</span><br><span class="line">          reader.readAsDataURL(file);</span><br><span class="line">          reader.onload = function(e) &#123;</span><br><span class="line">              // 图片base64化</span><br><span class="line">              var newUrl = this.result;</span><br><span class="line">              var imgstrdata = strLength(reader.result)</span><br><span class="line">              canvasDataURL(reader.result, imgstrdata / 300);</span><br><span class="line">          &#125;;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  function strLength(str) &#123;</span><br><span class="line">    str = str.substring(22);</span><br><span class="line">    const equalIndex = str.indexOf(&apos;=&apos;);</span><br><span class="line">    if (str.indexOf(&apos;=&apos;) &gt; 0) &#123;</span><br><span class="line">      str = str.substring(0, equalIndex);</span><br><span class="line">    &#125;</span><br><span class="line">    const strLen = str.length;</span><br><span class="line">    const data = strLen - (strLen / 8) * 2;</span><br><span class="line">    return (data / 1024).toFixed(2);</span><br><span class="line">  &#125;</span><br><span class="line">      // 压缩</span><br><span class="line">  function canvasDataURL(imgurl, re)&#123;</span><br><span class="line">    re = re &lt; 1 ? re += 1 : re;</span><br><span class="line">    const img = new Image();</span><br><span class="line">    img.src = imgurl;</span><br><span class="line">    img.onload = () =&gt; &#123;</span><br><span class="line">      const canvas = document.createElement(&apos;canvas&apos;);</span><br><span class="line">      const ctx = canvas.getContext(&apos;2d&apos;);</span><br><span class="line">      // 创建属性节点</span><br><span class="line">      const w = img.width / re;</span><br><span class="line">      const h = img.height / re;</span><br><span class="line">      const anw = document.createAttribute(&apos;width&apos;);</span><br><span class="line">      anw.nodeValue = w.toString();</span><br><span class="line">      const anh = document.createAttribute(&apos;height&apos;);</span><br><span class="line">      anh.nodeValue = h.toString();</span><br><span class="line">      canvas.setAttributeNode(anw);</span><br><span class="line">      canvas.setAttributeNode(anh);</span><br><span class="line">      ctx.drawImage(img, 0, 0, w, h);</span><br><span class="line">      // 可以return自己想要的内容</span><br><span class="line">      const base = canvas.toDataURL(&apos;image/jpeg&apos;, 0.6);</span><br><span class="line">      const dataSize = strLength(base);</span><br><span class="line">      console.log(dataSize)</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+=======
+        <p>…空白中。。。</p>
+>>>>>>> e3f9f48494f83cc5144a6882c528611b01cfefb6
 
       
 
@@ -679,7 +698,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">心情</a>
               </li>
+<<<<<<< HEAD
 >>>>>>> 75ceb721020406137a21434de53676cadda56268
+=======
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">照片处理</a>
+              </li>
+>>>>>>> e3f9f48494f83cc5144a6882c528611b01cfefb6
             
             <div class="clearfix"></div>
           </ul>
