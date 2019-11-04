@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-## 查看版本
-cat /etc/redhat-release
-
-## 创建文件夹
-mkdir  文件夹名
-
-## 创建文件
-touch 文件名
-
-## 关闭防火墙
-=======
 ---
 title: hyper-v虚拟机操作-docker
 tags: 
@@ -38,7 +26,6 @@ touch 文件名
 
 > 关闭防火墙
 ```
->>>>>>> 19bb8c17e953d32008ef0e21c2b34af0623db123
 1
     //停止
     systemctl stop firewalld.service
@@ -52,22 +39,6 @@ touch 文件名
     //永久开启3306端口
     sudo firewall-cmd --zone=public --add-port=3306/tcp --permanent
     //重载防火墙
-<<<<<<< HEAD
-    sudo firewall-cmd --reload
-
-参考见：https://www.cnblogs.com/TimLiuDream/p/9993625.html    
-
-## 删除文件夹名/文件名
-rm -rf 文件夹名（文件名）
-
-## 退出
-exit
-
-## 当前路径
-pwd
-
-## 重启docker
-=======
     sudo firewall-cmd --reload   
 
 参考见：https://www.cnblogs.com/TimLiuDream/p/9993625.html
@@ -90,7 +61,6 @@ pwd
 
 > 重启docker
 ```
->>>>>>> 19bb8c17e953d32008ef0e21c2b34af0623db123
 启动        systemctl start docker
 守护进程重启   sudo systemctl daemon-reload
 重启docker服务   systemctl restart  docker
@@ -98,14 +68,6 @@ pwd
 关闭docker   service docker stop   
 关闭docker  systemctl stop docker
 参考见：https://blog.csdn.net/easternunbeaten/article/details/80463837
-<<<<<<< HEAD
-
-## docker
-镜像images(类) 容器container(对象) 仓库repository  标签tag(版本号)
-
-### 查看镜像
-docker images 
-=======
 ```
 
 > docker
@@ -116,7 +78,6 @@ docker images
 > 查看镜像
 ```
 docker images
->>>>>>> 19bb8c17e953d32008ef0e21c2b34af0623db123
 
 > REPOSITORY: 镜像仓库源
 > TAG: 镜像标签（版本）
@@ -129,17 +90,6 @@ docker images
                 -qa (显示所有镜像ID)
                 --digests (显示镜像的摘要信息)
                 --no-trunc (显示完整的镜像信息)
-<<<<<<< HEAD
-
-## 搜索镜像
-docker search tomcat  
-(docker search -s 30 tomcat  只查找下载数超过30)
-
-## 拉取镜像
-docker pull 镜像名:版本号（不写版本号默认最新的）
-
-## 运行容器
-=======
 ```
 
 > 搜索镜像
@@ -155,7 +105,6 @@ docker pull 镜像名:版本号（不写版本号默认最新的）
 
 > 运行容器
 ```
->>>>>>> 19bb8c17e953d32008ef0e21c2b34af0623db123
 docker run -it imagesID        以交互式启动（启动后进入命令终端）
             i                   交互
              t                  终端
@@ -165,13 +114,6 @@ docker run -it -p 8888:8080 容器名（容器ID）
                主机端口:容器端口
               （可以运行多个容器）
 docker run -it -P 容器名（容器ID）随机分配端口
-<<<<<<< HEAD
-## 停止容器
-docker stop 容器ID
-docker kill 容器ID （强制停止）
-
-## 镜像运行状态
-=======
 > 停止容器
 docker stop 容器ID
 docker kill 容器ID （强制停止）
@@ -179,25 +121,11 @@ docker kill 容器ID （强制停止）
 
 > 镜像运行状态
 ```
->>>>>>> 19bb8c17e953d32008ef0e21c2b34af0623db123
 docker ps -a 列出所有正在运行的容器+历史运行过的
           -l 显示最近创建的容器
           -n 3 显示最近n创建的容器
           -q 静默模式，只显示容器编号
           --no-trunc 不截断输出
-<<<<<<< HEAD
-## 退出容器
-exit 停止并退出
-ctrl+p+q 退出不停止
-
-## 启动容器
-docker start 容器ID
-
-## 重启容器
-docker restart 容器ID
-
-# 删除镜像
-=======
 ```
 
 > 退出容器
@@ -218,39 +146,18 @@ docker restart 容器ID
 
 > 删除镜像
 ```
->>>>>>> 19bb8c17e953d32008ef0e21c2b34af0623db123
 docker rmi IMAGE ID 
 docker rmi -f IMAGE ID 强制删除
 docker rm CONTAINER ID 
 想要删除运行过的images必须首先删除它的container
-<<<<<<< HEAD
-
-## 查看日志
-=======
 ```
 
 > 查看日志
 ```
->>>>>>> 19bb8c17e953d32008ef0e21c2b34af0623db123
 docker logs 容器ID
 docker logs -t 容器ID
 docker logs -t -f 容器ID  持续打印
 docker logs -t -f --tail 3 容器ID  最后三行
-<<<<<<< HEAD
-
-## 停止容器运行
-docker top 容器ID
-
-## 查看容器内细节
-docker inspect 容器ID
-
-## 进入容器
-docker exec -it 容器ID
-docker attach 容器ID （重新进入容器）
-
-
-## 容器数据卷
-=======
 ```
 
 > 停止容器运行
@@ -271,21 +178,10 @@ docker attach 容器ID （重新进入容器）
 
 > 容器数据卷
 ```
->>>>>>> 19bb8c17e953d32008ef0e21c2b34af0623db123
 容器与主机文件共享
 1 docker cp
   docker run -it -v /宿主机绝对路径目录:/容器内目录 容器ID     文件夹不存在会自动创建
   docker run -it -v /宿主机绝对路径目录:/容器内目录:ro 容器ID   只读
-<<<<<<< HEAD
-
-## Dockerfile
-
-## 容器中安装vim
-apt-get update
-apt-get install vim
-
-## 容器中网络不通
-=======
 ```
 
 > Dockerfile
@@ -301,7 +197,6 @@ apt-get install vim
 
 > 容器中网络不通
 ```
->>>>>>> 19bb8c17e953d32008ef0e21c2b34af0623db123
 重启容器，还是不行的话
 测试 ping www.baidu.com
 访问不了
@@ -310,15 +205,10 @@ nameserver 8.8.8.8
 nameserver 202.102.224.68
 
 参考见：http://dockone.io/question/248
-<<<<<<< HEAD
-
-## 安装mysql
-=======
 ```
 
 > 安装mysql
 ```
->>>>>>> 19bb8c17e953d32008ef0e21c2b34af0623db123
 docker run -p 3301:3306 --name testmysql -v /test/mysql/conf:/etc/mysql/conf.d -v /test/mysql/logs:logs -v /test/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql
 
 docker exec -it 容器ID /bin/bash 
@@ -327,17 +217,6 @@ ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'root';  设置�
 
 iptables -t nat -A  DOCKER -p tcp --dport 3302 -j DNAT --to-destination 172.18.111.185:3301
 （外网连接3302）
-<<<<<<< HEAD
-
-## 安装node
-dokcer run -it -p 8081:808 --name testnode -v /test/node:/test/node node
-
-## nginx
-默认访问页面路径
-/usr/share/nginx/html nginx
-
-## 安装宝塔控制面板
-=======
 ```
 
 > 安装node
@@ -353,43 +232,27 @@ dokcer run -it -p 8081:808 --name testnode -v /test/node:/test/node node
 
 > 安装宝塔控制面板
 ```
->>>>>>> 19bb8c17e953d32008ef0e21c2b34af0623db123
 yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && bash install.sh
 查询账号密码
 /etc/init.d/bt default
 username: trwwj7kr
 password: 17f68cb8
-<<<<<<< HEAD
-
-
-## docker容器中安装 vim
-=======
 ```
 
 > docker容器中安装 vim
 ```
->>>>>>> 19bb8c17e953d32008ef0e21c2b34af0623db123
 bash: vim: command not found
 
 apt-get install vim
 apt-get update
 apt-get install vim
-<<<<<<< HEAD
-
-## windows挂载文件到dockers容器中
-=======
 ```
 
 > windows挂载文件到dockers容器中
 ```
->>>>>>> 19bb8c17e953d32008ef0e21c2b34af0623db123
 C:\Program Files\Docker\Docker\Resources\bin\docker.exe: Error response from daemon: C: drive is not shared. Please share it in Docker for Windows Settings.
 See 'C:\Program Files\Docker\Docker\Resources\bin\docker.exe run --help'.
 docker软件Settings鼠标右键->Shared Drives->把你想挂载的文件所有的盘符勾上->Apply
 
-<<<<<<< HEAD
-参考见：https://blog.csdn.net/m0_37477061/article/details/82217525
-=======
 参考见：https://blog.csdn.net/m0_37477061/article/details/82217525
 ```
->>>>>>> 19bb8c17e953d32008ef0e21c2b34af0623db123
